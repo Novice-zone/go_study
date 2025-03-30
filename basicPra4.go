@@ -58,7 +58,7 @@ func main() {
 			break
 		}
 	}
-	//6.continue 继续下一次循环
+	//6.continue 继续下一次循环，只能在for中使用
 	for i := 0; i <= 5; i++ {
 		if i == 3 {
 			continue //跳过这次循环
@@ -92,22 +92,46 @@ func main() {
 	//	fmt.Println("无效值")
 	//}
 	//2.case一次判断多个值
-	num := 5
-	switch num {
-	case 1, 3, 5, 7, 9:
-		fmt.Println("奇数")
-	case 2, 4, 6, 8, 0:
-		fmt.Println("偶数")
-	}
-	//3，case中使用表达式
-	age := 47
-	switch {
-	case age >= 18:
-		fmt.Println("adult")
-	case age < 17:
-		fmt.Println("child")
-	default:
-		fmt.Println("...")
+	//num := 5
+	//switch num {
+	//case 1, 3, 5, 7, 9:
+	//	fmt.Println("奇数")
+	//case 2, 4, 6, 8, 0:
+	//	fmt.Println("偶数")
+	//}
+	////3，case中使用表达式
+	//age := 47
+	//switch {
+	//case age >= 18 && age <= 45:
+	//	fmt.Println("adult")
+	//case age < 17:
+	//	fmt.Println("child")
+	//default:
+	//	fmt.Println("...")
+	//}
+	////fallthrough
+	//s := "a"
+	//switch {
+	//case s == "a":
+	//	fmt.Println("a")
+	//	fallthrough //可以执行switch 中满足条件的下一个case
+	//case s == "b":
+	//	fmt.Println("b")
+	//case s == "c":
+	//	fmt.Println("c")
+	//default:
+	//	fmt.Println("...")
+	//}
 
+	//代码练习：打印9*9乘法表
+	//1.先打印行，再打印列
+	for i := 1; i < 10; i++ {
+		for j := 1; j < 10; j++ {
+			fmt.Printf("%dx%d=%d ", i, j, i*j)
+			if i*j < 10 {
+				fmt.Printf(" ")
+			}
+		}
+		fmt.Println()
 	}
 }

@@ -409,6 +409,7 @@ func test_06() {
 	sort.Ints(a[:])
 	fmt.Println(a)
 }
-func main() {
+
+/*func main() {
 	test_06()
-}
+}*/

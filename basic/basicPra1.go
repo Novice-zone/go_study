@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 var
 func test() (int, string) {
@@ -93,16 +91,16 @@ func main() {
 //	GB = 1 << (10 * iota)
 //)
 
-const (
-	a, b = iota + 1, iota + 2
-	c, d
-	e, f
-)
+//const (
+//	a, b = iota + 1, iota + 2
+//	c, d
+//	e, f
+//)
 
-func main() {
-	//fmt.Println(pi, e)
-	//fmt.Println(n1, n2, n3)
-	//fmt.Println(n0, n1, n2, n3, n4, n5, n6)
-	//fmt.Println(KB, MB, GB)
-	fmt.Println(a, b, c, d, e, f)
-}
+//func main() {
+//	//fmt.Println(pi, e)
+//	//fmt.Println(n1, n2, n3)
+//	//fmt.Println(n0, n1, n2, n3, n4, n5, n6)
+//	//fmt.Println(KB, MB, GB)
+//	fmt.Println(a, b, c, d, e, f)
+//}

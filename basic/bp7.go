@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 // 函数做参数
 //func add(x, y int) int {
 //	return x + y
@@ -138,28 +133,28 @@ import (
 //		funcB()
 //		funcC()
 //	}
-func main() {
-	//写一个程序，统计一个字符串中每个单词出现的次数。
-	//比如：“how do you do"中how=1 do=2 you=1。
-	//1.定义一个map[string]int
-	var s = "how do you do"
-	var wordCount = make(map[string]int, 10)
-	//2.分割字符串s，拆分为一个个单词
-	words := strings.Split(s, " ")
-	//3.遍历words，统计
-	//for _, word := range words {
-	//	v, ok := wordCount[word]
-	//	if ok {
-	//		//map中有这个单词
-	//		wordCount[word] = v + 1
-	//	} else {
-	//		wordCount[word] = 1
-	//	}
-	//}
-	for _, word := range words {
-		wordCount[word]++
-	}
-	for k, v := range wordCount {
-		fmt.Println(k, v)
-	}
-}
+//func main() {
+//	//写一个程序，统计一个字符串中每个单词出现的次数。
+//	//比如：“how do you do"中how=1 do=2 you=1。
+//	//1.定义一个map[string]int
+//	var s = "how do you do"
+//	var wordCount = make(map[string]int, 10)
+//	//2.分割字符串s，拆分为一个个单词
+//	words := strings.Split(s, " ")
+//	//3.遍历words，统计
+//	//for _, word := range words {
+//	//	v, ok := wordCount[word]
+//	//	if ok {
+//	//		//map中有这个单词
+//	//		wordCount[word] = v + 1
+//	//	} else {
+//	//		wordCount[word] = 1
+//	//	}
+//	//}
+//	for _, word := range words {
+//		wordCount[word]++
+//	}
+//	for k, v := range wordCount {
+//		fmt.Println(k, v)
+//	}
+//}

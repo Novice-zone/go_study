@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	xmm "go_study/basic/basic18/package_demo/calc" //当包名冲突就起个别名/包名很长起个别名
+	xmm "go_study/basic/basic18/package_demo/calc"
+	//当包名冲突就起个别名/包名很长起个别名
 )
 
 // Go不允许导入包不使用

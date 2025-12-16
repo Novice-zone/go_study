@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // 函数做参数
 //func add(x, y int) int {
 //	return x + y
@@ -158,3 +160,42 @@ package main
 //		fmt.Println(k, v)
 //	}
 //}
+
+//
+////匿名函数：没有函数名的函数
+////函数做返回值只能返回匿名函数
+//
+////使用匿名函数 1.保存到变量 2.立即执行
+//
+//func main() {
+//	//1.保存到变量
+//	add := func(x, y int) {
+//		fmt.Println(x + y)
+//	}
+//	add(10, 20)
+//
+//	//2.立即执行/自执行函数 定义完直接加()
+//	func(x, y int) {
+//		fmt.Println(x + y)
+//	}(50, 50)
+//
+//}
+
+// 闭包
+// 闭包=函数+引用环境
+// 闭包 = 嵌套在另一个函数（外层函数）内部的函数（内层函数）
+// + 该内层函数引用了外层函数的变量（引用形式）
+// + 这个变量没有通过内层函数的参数传入
+func adder() func(int) int {
+	var x int
+	return func(y int) int {
+		x += y
+		return x
+	}
+}
+
+func main() {
+	f := adder()
+	fmt.Println(f(1))
+	//fmt.Println(f) 不加括号就是一个地址
+}
